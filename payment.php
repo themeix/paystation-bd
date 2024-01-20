@@ -2,10 +2,10 @@
 if (isset($_POST["access"])) {
     $data = $_POST["access"];
     $cartTotal = $_POST["cartTotal"];
-    $cust_name = $_POST["cust_name"];
-    $cust_phone = $_POST["cust_phone"];
-    $cust_email = $_POST["cust_email"];
-    $cust_address = $_POST["cust_address"];
+    $cust_name = $_POST["billing_first_name"];
+    $cust_phone = $_POST["billing_phone"];
+    $cust_email = $_POST["billing_email"];
+    $cust_address = $_POST["billing_address_1"];
     $invoice_number = $_POST["invoice_number"];
     $baseurl = $_POST["baseurl"];
     $returnURL = $_POST["returnURL"];
@@ -31,7 +31,7 @@ if (isset($_POST["access"])) {
             'token:' . $token
         );
         $post_feild = array(
-            'invoice_number' => $invoice_number,
+            'invoice_number' => '000'.$invoice_number,
             'currency' => "BDT",
             'payment_amount' => $cartTotal,
             'cust_name' => $cust_name,

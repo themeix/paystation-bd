@@ -6,7 +6,7 @@ class paystation_payment_gateway extends WC_Payment_Gateway
 	{
 		$this->id                 	= 'paystation_payment_gateway';
 		$this->method_title       	= __('Paystation Payment', 'paystation_payment_gateway');
-		$this->title              	= __('Pay with Paystation', 'paystation_payment_gateway');
+		$this->title              	= __('Secure Pay with Paystation', 'paystation_payment_gateway');
 		$this->icon = trailingslashit(WP_PLUGIN_URL) . plugin_basename(dirname(__FILE__)) . '/assets/icon.png';
 		$this->has_fields = true;
 		$this->description = $this->get_option('description');
